@@ -5,16 +5,17 @@ except ImportError:
 
 
 class SimpleSpec(unittest.TestCase):
-    """SimpleSpec: this will be picked up by Nose"""
+    # this will be collected by nose
     def it_should_pass(self):
         assert True
 
 
 class BasicSpec:
-    """BasicSpec: this will be picked up by pytest"""
+    # this will be collected by pytest
     def it_should_pass(self):
         assert True
 
 
+# This will be collected by both nose and pytest
 def ensure_pass():
     assert True
